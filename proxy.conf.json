@@ -1,0 +1,11 @@
+
+{
+    "/emplaoyee": {
+      "target": "https://spring-employeemangmant.herokuapp.com",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/emplaoyee": ""
+      }
+    }
+  }

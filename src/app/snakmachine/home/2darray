@@ -1,0 +1,164 @@
+ this.snacks2D[1].push([
+      {
+        name: 'Snickers',
+        price: 1.2,
+        photo: '10'
+      },
+      {
+        name: 'Snickers',
+        price: 1.2,
+        photo: '10'
+      },
+      {
+        name: 'Snickers',
+        price: 1.2,
+        photo: '10'
+      },
+      {
+        name: 'Snickers',
+        price: 1.2,
+        photo: '10'
+      },
+      {
+        name: 'Snickers',
+        price: 1.2,
+        photo: '10'
+      },
+    ],
+      [
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+      ],
+      [
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+      ],
+      [
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+      ],
+      [
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+      ],
+      [
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+        {
+          name: 'Snickers',
+          price: 1.2,
+          photo: '10'
+        },
+      ],
+
+    );

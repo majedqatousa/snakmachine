@@ -1,0 +1,206 @@
+<div class="section section-basic">
+    <div class="container">
+        <div class="row machine-body">
+            <div class="col-md-10  col-sm-12 content-center ml-auto mr-auto">
+                <!-- <div *ngFor="let item of companies ">
+                    <p> * </p>
+                </div> -->
+                <div class="row">
+                    <div class="col-md-8 snack-slot">
+                        <div class="row ">
+                            <div class="col-md-10  col-sm-12 content-center ml-auto mr-auto screen-msg">
+                                <div class="form-group ">
+                                    <input type="text" [value]="mainMsg" placeholder="Snacks Machien "
+                                        class="form-control" />
+                                        <button *ngIf= "redyToPurchase" class="btn btn-primary btn-round" (click)="purchase()"
+                                type="button">purchase</button> 
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 col-sm-12 snack-slot-body">
+                                <table>
+                                    <tr *ngFor="let snack of arr_snacks ; let i=index">
+                                        <td *ngFor="let s of snack ; let j=index">
+                                            <div class="card user-card">
+
+                                                <div class="card-block text-center" [justify]="'center'">
+                                                    <div class="user-image">
+                                                        <img src="https://icon-library.com/images/snacks-icon-png/snacks-icon-png-23.jpg"
+                                                            alt="User-Profile-Image">
+                                                    </div>
+                                                    <h6 class="f-w-600 m-t-25 m-b-10">{{s.name}}</h6>
+                                                    <p class="text-muted"> {{ i }}{{ j }}</p>
+
+                                                </div>
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 functions-slot">
+                        <div class="row money-slot">
+                            <div class="col-md-12 content-center ml-auto mr-auto">
+                                <div class="money-display">
+                                    {{moneycharged}} {{currency}}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-10 content-center ml-auto mr-auto">
+                                <button class="btn btn-primary btn-round" (click)="open(classic,'' , '')"
+                                    type="button">Charge</button>
+                                <!-- start modle  -->
+                                <ng-template #classic let-c="close" let-d="dismiss">
+                                    <div class="modal-header justify-content-center">
+                                        <button type="button" class="close" (click)="d('Cross click')">
+                                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                                        </button>
+                                        <h4 class="title title-up">Recharge your balance</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h6>cents : {{cents}} , notes : {{notes}} , card charge : {{card}} , total :
+                                            {{totalCharged}} - {{currency}}</h6>
+                                        <span class="badge badge-danger">{{notAcceptedMsg}}</span>
+
+                                        <p>Select how to charge</p>
+
+                                        <div class="form-check form-check-radio">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="charge"
+                                                    id="coinRadio" value="coin" checked
+                                                    (change)="onItemChange($event.target.value)">
+                                                <span class="form-check-sign"></span>
+                                                Coins Slot
+                                            </label>
+                                            <div *ngIf="coinCharge">
+                                                <form #chargeCoinForm (submit)="chargeCoin()">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <input type="number" name="coin"
+                                                                    [(ngModel)]="moneySlot.coinSlot"
+                                                                    placeholder="Enter Coin " class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <button type="submit"
+                                                                class="btn btn-primary btn-round  btn-sm">charge coins
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="form-check form-check-radio">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="charge"
+                                                    id="notesRadio" value="notes"
+                                                    (change)="onItemChange($event.target.value)">
+                                                <span class="form-check-sign"></span>
+                                                Notes Slot
+                                            </label>
+                                            <div *ngIf="notesCharge">
+                                                <form #chargeNotesForm (submit)="chargeCoin()">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <input type="number" name="coin"
+                                                                    [(ngModel)]="moneySlot.notesSlot"
+                                                                    placeholder="Enter Notes " class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <button type="submit"
+                                                                class="btn btn-primary btn-round  btn-sm">charge notes
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="form-check form-check-radio">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="charge"
+                                                    id="cardRadio" value="card"
+                                                    (change)="onItemChange($event.target.value)">
+                                                <span class="form-check-sign"></span>
+                                                Card Slot
+                                            </label>
+                                            <div *ngIf="cardCharge">
+                                                <p>text options </p>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary btn-round btn-sm" (click)="clearCharge()"
+                                            type="button">Clear all</button>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"
+                                            (click)="charge(totalCharged)">Charge</button>
+                                        <button type="button" class="btn btn-default"
+                                            (click)="c('Close click')">Close</button>
+                                    </div>
+                                </ng-template>
+                                <!-- modle end  -->
+                                    <!-- start modle  -->
+                                    <ng-template #classic2 let-c="close" let-d="dismiss">
+                                        <div class="modal-header justify-content-center">
+                                            <button type="button" class="close" (click)="d('Cross click')">
+                                                <i class="now-ui-icons ui-1_simple-remove"></i>
+                                            </button>
+                                            <h4 class="title title-up">Snacks</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="https://icon-library.com/images/snacks-icon-png/snacks-icon-png-23.jpg" alt="">
+                                            <h5> Your choice is {{ selectedSnack.name }} </h5>
+                                            <h6>with price  :  {{selectedSnack.price }} </h6>
+                                            <span class="badge badge-danger">you are not charge yet ,   please charge and select again </span>
+
+                                           
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary"
+                                                (click)="charge(totalCharged)">Done</button>
+                                            <button type="button" class="btn btn-default"
+                                                (click)="c('Close click')">Close</button>
+                                        </div>
+                                    </ng-template>
+                                    <!-- modle end  -->
+
+                            </div>
+                        </div>
+                        <div class="row key-pad">
+                            <div class="col-md-12 content-center ml-auto mr-auto">
+                                <div class="maindisplay">
+                                    {{mainText}}
+                                </div>
+                                <div class="keypad">
+                                    <div class="keys ackey one-line" (click)="allClear()">AC</div>
+                                    <div class="keys numkey one-line" (click)="pressKey('1')">1</div>
+                                    <div class="keys numkey one-line" (click)="pressKey('2')">2</div>
+                                    <div class="keys numkey one-line" (click)="pressKey('3')">3</div>
+                                    <div class="keys numkey one-line" (click)="pressKey('4')">4</div>
+                                    <div class="keys numkey one-line" (click)="pressKey('5')">5</div>
+                                    <div class="keys numkey one-line" (click)="pressKey('6')">6</div>
+                                    <div class="keys numkey one-line" (click)="pressKey('7')">7</div>
+                                    <div class="keys numkey one-line" (click)="pressKey('8')">8</div>
+                                    <div class="keys numkey one-line" (click)="pressKey('9')">9</div>
+                                    <div class="keys numkey zerokey one-line" (click)="pressKey('0')">0</div>
+
+                                    <div class="enter-key equalkey one-line" (click)="getSnack()">Enter</div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

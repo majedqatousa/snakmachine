@@ -1,0 +1,83 @@
+.machine-body{
+    margin-top: 20px;
+    height: 750px;
+    /* background-color: aqua; */
+}
+.snack-slot{
+  
+}
+.functions-slot{
+    height: 750px;
+    background-color: brown;
+}
+.screen-msg{
+  
+   
+}
+.snack-slot-body table{
+
+  color:  black;
+  font-size: 18px;
+}
+.snack-slot-body table tr {
+padding: 4px;
+  }
+.snack-slot-body td {
+padding-left: 25px;
+}
+.money-slot{
+    margin-top: 10%;
+}
+.key-pad{
+margin-top: 20%;
+}
+.maindisplay {
+    border-radius: 25px;
+    background: lightgrey;
+    height: 105px;
+    padding: 5% !important;
+    font-size: 3rem;
+    text-align: center;
+    font-family: Courier, monospace;
+    overflow: auto;
+}
+.money-display{
+    border-radius: 25px;
+    background: lightgrey;
+    height: 105px;
+    padding: 5% !important;
+    font-size: 3rem;
+    text-align: center;
+    font-family: Courier, monospace;
+    overflow: auto;
+}
+.keypad {
+    background: whitesmoke;
+    margin-top: 10px;
+    border-radius: 25px;
+    height: 300px
+}
+.keys {
+    margin: 0;
+    width: 25%;
+    height: 20%;
+    color: black;
+    padding: 5%;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+.enter-key{
+    margin: 0;
+    width: 50%;
+    height: 20%;
+    background: whitesmoke;
+    color: black;
+    padding: 5%;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+.one-line {
+    display: inline-block;
+}
